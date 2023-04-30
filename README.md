@@ -10,8 +10,8 @@ It's a Recognnaissance tool that collects and enumerates necessary information f
 
 ## Install
 ```console
-$ git clone ...
-$ cd Recotime
+$ git clone https://github.com/lazy29t/RecoTime.git
+$ cd RecoTime
 $ sudo chmod +x recotime.sh
 $ ./recotime.sh
 
