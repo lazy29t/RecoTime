@@ -17,3 +17,6 @@ $ ./recotime.sh
 
 ```
 Stay Hacking💪
+
+### Credits:
+To mhmdiaa for give us `waybackurls.py`
