@@ -27,12 +27,11 @@ Use the `-d` option followed by the target DOMAIN to start the reconnaissance
 ```
 The output will be displayed on your terminal and saved to a `.txt` file.
 
----
 
 >If you encounter any issues or have any questions, you can contact to me :)
 
 
-Stay Hacking💪
+# Stay Hacking💪
 
 ### Credits:
 To **mhmdiaa** for give us `waybackurls.py`
