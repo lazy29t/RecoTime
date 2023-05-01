@@ -25,7 +25,7 @@ Use the `-d` option followed by the target DOMAIN to start the reconnaissance
 ```bash
 ./recotime.sh -d example.com
 ```
-The output will be displayed on your terminal and saved to a .txt file.
+The output will be displayed on your terminal and saved to a `.txt` file.
 
 ---
 
