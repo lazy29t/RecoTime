@@ -3,10 +3,10 @@ RECO-TIME is a web reconnaissance tool that helps to perform enumeration of nece
 
 ## Functions
 
-- Identifies the tecnology working on a Web Page using'WhatWeb'.
-- Searches subdomains using Subfinder.
-- Discovers endpoints by means of `Waybackurls`.
-- Analyzes vulnerabilities in WordPress Web Pages using `WPScan`.
+- Identifies the tecnology working on a Web Page using `WhatWeb`
+- Searches subdomains using `Subfinder`
+- Discovers endpoints by means of `Waybackurls`
+- Analyzes vulnerabilities in WordPress Web Pages using `WPScan`
 
 ## Install
 ```console
