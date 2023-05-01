@@ -1,4 +1,4 @@
-# RECO-TIME
+# RECO-TIME⏳
 RECO-TIME is a web reconnaissance tool that helps to perform enumeration of necessary information, with the purpose of our saving time.
 
 ## Functions
