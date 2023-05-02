@@ -34,4 +34,4 @@ The output will be displayed on your terminal and saved to a `.txt` file.
 Stay Hacking💪
 
 ### Credits:
-To **mhmdiaa** for give us `waybackurls.py`
+To **mhmdiaa** for give us [**waybackurls.py**](https://gist.github.com/mhmdiaa/adf6bff70142e5091792841d4b372050)
