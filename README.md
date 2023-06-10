@@ -13,7 +13,7 @@ RECO-TIME is a web reconnaissance tool that helps to perform enumeration of nece
 $ git clone https://github.com/lazy29t/RecoTime.git
 $ cd RecoTime
 $ sudo chmod +x recotime.sh
-$ ./recotime.sh
+$ sudo ./recotime.sh
 ```
 ## Usage
 
