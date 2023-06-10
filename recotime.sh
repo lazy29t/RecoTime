@@ -96,7 +96,6 @@ function Recotime(){
                                 echo -e "\t\n${yellowColour}[X]${endColour} ${redColour}Invalid Option...${endColour}"
                         fi
 
-			fi
 		fi
 
 		sleep 2
