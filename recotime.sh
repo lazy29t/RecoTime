@@ -55,18 +55,6 @@ function dependencies(){
 
 }
 
-#cleanup
-
-function cleanup() {
-
-	echo -e "\nsScript Stopped, Saving results.."
-	echo "$(RecoTime)" > "${url_target}.txt"
-	exit 0
-}
-
-
-
-
 
 #Recognizement step
 
