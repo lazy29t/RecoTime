@@ -90,6 +90,12 @@ function Recotime(){
 				echo -e "\t\n${yellowColour}[+]${endColour} ${turquoiseColour}Starting with Wpscan..."
 				wpscan --url "${url_target}"  
 				sleep 5
+			elif [ "${answer}" = "n" ]; then
+                                echo -e "\t\n${yellowColour}[-] skip...${endColour}\n"
+                        else 
+                                echo -e "\t\n${yellowColour}[X]${endColour} ${redColour}Invalid Option...${endColour}"
+                        fi
+
 			fi
 		fi
 
@@ -105,6 +111,7 @@ function Recotime(){
 	
 	echo "Ups.. try again \('-')/"
 	fi
+	exit 0
 
 }
 
