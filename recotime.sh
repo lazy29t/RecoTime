@@ -48,7 +48,7 @@ function dependencies() {
 # Recognizement step
 function Recotime() {
     clear
-    echo -e "\n\t${purpleColour}¡It's RECO-TIMEE (*-*)!${endColour}\n"
+    echo -e "\n\t${purpleColour}¡It's RECO-TIMEE ~(*-*)~!${endColour}\n"
     echo -e "\t\t${greenColour}by${endColour} ${redColour}lazy29t${endColour}\n"
     echo -e "\n${purpleColour}[+]${endColour} ${greenColour}Start to Reconnaissance${endColour}\n"
 
@@ -80,7 +80,7 @@ function Recotime() {
         sleep 2
 
     else
-        echo "¡Ups! try again \('-')/"
+        echo "¡Ups! you are not root \('-')/"
     fi
     exit 0
 }
