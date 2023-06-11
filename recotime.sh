@@ -27,7 +27,7 @@ function help_panel() {
     exit 0
 }
 
-# Requeriments
+# Requerimients
 function dependencies() {
     tput civis
     clear
@@ -48,16 +48,16 @@ function dependencies() {
 # Recognizement step
 function Recotime() {
     clear
-    echo -e "\n\t${purpleColour}¡It's RECO-TIMEE ~(*-*)~!${endColour}\n"
-    echo -e "\t\t${greenColour}por${endColour} ${redColour}lazy29t${endColour}\n"
-    echo -e "\n${purpleColour}[+]${endColour} ${greenColour}Starting with Reconnaissance${endColour}\n"
+    echo -e "\n\t${purpleColour}¡It's RECO-TIMEE (*-*)!${endColour}\n"
+    echo -e "\t\t${greenColour}by${endColour} ${redColour}lazy29t${endColour}\n"
+    echo -e "\n${purpleColour}[+]${endColour} ${greenColour}Start to Reconnaissance${endColour}\n"
 
     if [ -n "$url_target" ]; then
         whatweb -v "$url_target" | grep -A 20 -e 'HTTP Headers' -e 'Summary' -e '200' | cut -c 1-
         
         if whatweb -v "$url_target" | grep -q "WordPress"; then
-            echo -e "\n${purpleColour}[+]${endColour} ${turquoiseColour}The page has WordPress tecnology${endColour}"
-            read -rp $'\e[1;36m Do you want start with wpscan? (y/n): \e[0m' answer
+            echo -e "\n${purpleColour}[+]${endColour} ${turquoiseColour}The web page has WordPress technology${endColour}"
+            read -p $'\e[1;36mDo you want to use wpscan tool? (y/n):\e[0m' answer
 
             # In case the web page has WordPress:
             if [ "$answer" = "y" ]; then
@@ -65,7 +65,7 @@ function Recotime() {
                 wpscan --url "$url_target" -e vp,u
                 sleep 2
             elif [ "$answer" = "n" ]; then
-                echo -e "\t\n${yellowColour}[-] Skip...${endColour}\n"
+                echo -e "\t\n${yellowColour}[-] Skiping...${endColour}\n"
             else
                 echo -e "\t\n${yellowColour}[X]${endColour} ${redColour}Invalid Option...${endColour}"
             fi
@@ -107,7 +107,7 @@ if [ "$parameter_counter" -ne 1 ]; then
     help_panel
 else
     dependencies
-    Recotime  		
+    Recotime  
     tput cnorm
 
 fi | tee -a "${url_target}.txt"
