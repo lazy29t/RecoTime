@@ -17,7 +17,7 @@ export DEBIAN_FRONTEND=noninteractive
 trap ctrl_c INT
 
 function ctrl_c(){
-	echo -e "\n\n${blueColour}[+]${endColour} ${yellowColour}Saliendo...${endColour}\n"
+	echo -e "\n\n${blueColour}[+]${endColour} ${yellowColour}Exiting...${endColour}\n"
 	tput cnorm; exit 0
 }
 
@@ -28,8 +28,6 @@ function help_panel(){
 
 	echo -e "\n\t${greenColour}Do you need a help \(.-.)/ ?${endColour}\n"
 	echo -e "${turquoiseColour}./recotime.sh -d [TARGET]${endColour}"
-
-
 	exit 0
 	
 }
@@ -68,6 +66,7 @@ function Recotime(){
 		 
 		whatweb -v ${url_target} | grep -A 20 -e 'HTTP Headers' -e 'Summary' -e '200'| cut -c 1- 
 		
+		
 		if whatweb -v "${url_target}" | grep "WordPress"; then
 			echo -e "\n${purpleColour}[+]${endColour} ${turquoiseColour}The page has WordPress tecnology${endColour}" 
 			read -p $'\e[1;36m Do you want start with wpscan?(y/n): \e[0m' answer 
@@ -76,8 +75,8 @@ function Recotime(){
 
 			if [ "${answer}" = "y" ]; then
 				echo -e "\t\n${yellowColour}[+]${endColour} ${turquoiseColour}Starting with Wpscan..."
-				wpscan --url "${url_target}"  
-				sleep 5
+				wpscan --url "${url_target}" -e vp,u
+				sleep 2
 			elif [ "${answer}" = "n" ]; then
                                 echo -e "\t\n${yellowColour}[-] skip...${endColour}\n"
                         else 
@@ -125,9 +124,8 @@ if [ $parameter_counter -ne 1 ]; then
 	else
 		dependencies
 		Recotime
-		echo "$(Recotime)" > "$url_target.txt"
 		tput cnorm
-	fi
+	fi | tee -a "${url_target.txt}"
 
 
 
